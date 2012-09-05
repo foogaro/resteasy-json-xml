@@ -9,7 +9,7 @@
     <version>1.0</version>
     <packaging>war</packaging>
 
-    <description>This project aims to explain you how to use RESTeasy 1.2.1.GA within JBoss EAP 5.1.2.</description>
+    <description>This project aims to explain how to use RESTeasy 1.2.1.GA with JBoss EAP 5.1.2 when you deal with @Form and @FormParam.</description>
 
     <dependencies>
 
