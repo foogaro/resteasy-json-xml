@@ -18,4 +18,4 @@ What you need is:
 Why am I sharing this?
 ----------------------
 
-I'm sure I'll need that soon or later!
+I'm sure I'll need that sooner or later!
