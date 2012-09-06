@@ -19,6 +19,20 @@ import javax.ws.rs.core.MediaType;
 @Path("library")
 public interface LibraryService {
 
+    /*
+        When serializing the response in JSON format, to avoid this error:
+
+            09:14:48,143 ERROR [org.jboss.resteasy.core.SynchronousDispatcher.handleFailure] Failed executing POST /library/authors.json
+            org.jboss.resteasy.spi.WriterException: java.lang.IllegalStateException: Invalid JSON namespace: http://www.w3.org/2001/XMLSchema-instance
+
+        Annotate the method specifying the namespace as follow:
+
+            @Mapped(namespaceMap = {
+                    @XmlNsMap(namespace = "http://www.w3.org/2001/XMLSchema-instance",jsonName = "")
+            })
+
+    */
+
     @GET
     @Path("books")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})

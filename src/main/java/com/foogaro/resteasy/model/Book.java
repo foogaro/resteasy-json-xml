@@ -1,8 +1,5 @@
 package com.foogaro.resteasy.model;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import javax.ws.rs.FormParam;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlElementWrapper;
@@ -16,8 +13,6 @@ import java.util.List;
 
 @XmlRootElement(name = "book")
 public class Book implements Serializable {
-
-    protected final static Logger logger = LoggerFactory.getLogger(Book.class);
 
     @FormParam("title")
     private String title;
