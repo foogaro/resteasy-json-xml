@@ -36,25 +36,19 @@ public interface LibraryService {
     @GET
     @Path("books")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    @Mapped(namespaceMap = {
-            @XmlNsMap(namespace = "http://www.w3.org/2001/XMLSchema-instance",jsonName = "")
-    })
+    @Mapped(namespaceMap = {@XmlNsMap(namespace = "http://www.w3.org/2001/XMLSchema-instance",jsonName = "")})
     public Result getAllBooks();
 
     @POST
     @Path("books")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    @Mapped(namespaceMap = {
-            @XmlNsMap(namespace = "http://www.w3.org/2001/XMLSchema-instance",jsonName = "")
-    })
+    @Mapped(namespaceMap = {@XmlNsMap(namespace = "http://www.w3.org/2001/XMLSchema-instance",jsonName = "")})
     public Result findByBook(@Form LibraryRequest libraryRequest);
 
     @POST
     @Path("authors")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-    @Mapped(namespaceMap = {
-            @XmlNsMap(namespace = "http://www.w3.org/2001/XMLSchema-instance",jsonName = "")
-    })
+    @Mapped(namespaceMap = {@XmlNsMap(namespace = "http://www.w3.org/2001/XMLSchema-instance",jsonName = "")})
     public Result findByAuthor(@Form LibraryRequest libraryRequest);
 
 }
